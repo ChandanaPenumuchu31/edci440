@@ -85,7 +85,7 @@ if not filtered_data.empty:
 
 # Response display
 st.write("### View Responses")
-for q in ['Q8', 'Q10', 'Q11', 'Q12']:
+for q in ['challenges you found in this process', 'what you learned about your students', 'impact of perception of yourself as a teacher', 'outcomes you found as a result of your study']:
     if st.button(f"Show Responses for {q}"):
         responses = "\n\n".join([f"Response {idx + 1}: {row[q]}" for idx, row in filtered_data.iterrows()])
         st.text_area(f"Responses for {q}", responses, height=300)
